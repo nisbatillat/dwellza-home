@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dwellza Home | Home Services</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #172033;
+}
+header {
+  background: #102b25;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #a7f3c0;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.hero {
+  background: #102b25;
+  color: white;
+  padding: 65px 22px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.hero p {
+  color: #d1e5dc;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+.btn {
+  display: inline-block;
+  background: #a7f3c0;
+  color: #102b25;
+  padding: 13px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+section {
+  padding: 40px 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 27px;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 750px;
+  margin: auto;
+}
+.service {
+  background: white;
+  padding: 22px 10px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 3px 12px #0000000a;
+}
+.service span {
+  font-size: 35px;
+}
+.service h3 {
+  margin: 12px 0 7px;
+}
+.service p {
+  font-size: 13px;
+  color: #64748b;
+}
+.booking {
+  background: #eaf5ee;
+}
+form {
+  max-width: 480px;
+  margin: auto;
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 9px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 15px;
+}
+form button {
+  width: 100%;
+  margin-top: 10px;
+}
+.note {
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 12px;
+}
+footer {
+  background: #102b25;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  line-height: 1.8;
+}
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  background: #25d366;
+  color: white;
+  padding: 14px 17px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (min-width: 600px) {
+  .services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero h1 {
+    font-size: 48px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Dwellza Home</div>
+  <a href="#booking">Book a Service ↗</a>
+</header>
+
+<div class="hero">
+  <h1>Your Home.<br>Your Comfort.</h1>
+  <p>Trusted home services, made simple.<br>
+  Find the right help for your home in Hubli.</p>
+  <a class="btn" href="#services">Explore Services</a>
+</div>
+
+<section id="services">
+  <h2>What Do You Need?</h2>
+  <div class="services">
+
+    <div class="service">
+      <span>🔧</span>
+      <h3>Plumbing</h3>
+      <p>Leaks, taps and repairs</p>
+    </div>
+
+    <div class="service">
+      <span>💡</span>
+      <h3>Electrician</h3>
+      <p>Wiring and electrical work</p>
+    </div>
+
+    <div class="service">
+      <span>🧹</span>
+      <h3>Cleaning</h3>
+      <p>Keep your home fresh</p>
+    </div>
+
+    <div class="service">
+      <span>❄️</span>
+      <h3>AC Service</h3>
+      <p>AC care and maintenance</p>
+    </div>
+
+    <div class="service">
+      <span>🪚</span>
+      <h3>Carpentry</h3>
+      <p>Furniture and woodwork</p>
+    </div>
+
+    <div class="service">
+      <span>🎨</span>
+      <h3>Painting</h3>
+      <p>Refresh your walls</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <h2>Book a Home Service</h2>
+
+  <form id="bookingForm">
+    <input id="name" type="text"
+      placeholder="Your Full Name" required>
+
+    <input id="phone" type="tel"
+      placeholder="Your Phone Number"
+      pattern="[0-9]{10}" required>
+
+    <select id="service" required>
+      <option value="">Choose a Service</option>
+      <option>Plumbing</option>
+      <option>Electrician</option>
+      <option>Cleaning</option>
+      <option>AC Service</option>
+      <option>Carpentry</option>
+      <option>Painting</option>
+      <option>Other</option>
+    </select>
+
+    <input id="area" type="text"
+      placeholder="Your Area in Hubli" required>
+
+    <textarea id="details"
+      placeholder="Describe the work needed"
+      rows="3"></textarea>
+
+    <button class="btn" type="submit">
+      Request a Booking
+    </button>
+
+    <p class="note">
+      Your request will open in WhatsApp for confirmation.
+    </p>
+  </form>
+</section>
+
+<footer>
+  <h3>Dwellza Home</h3>
+  <p>Making home services simpler.</p>
+  <p>Serving Hubli, Karnataka</p>
+  <p>© 2026 Dwellza Home</p>
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/?text=Hello%20Dwellza%20Home"
+   target="_blank" rel="noopener">
+  WhatsApp
+</a>
+
+<script>
+document.getElementById("bookingForm")
+.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const service = document.getElementById("service").value;
+  const area = document.getElementById("area").value;
+  const details = document.getElementById("details").value;
+
+  const message =
+    "Hello Dwellza Home! I want to request a service.%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Service: " + encodeURIComponent(service) + "%0A" +
+    "Area: " + encodeURIComponent(area) + "%0A" +
+    "Details: " + encodeURIComponent(details);
+
+  window.open("https://wa.me/?text=" + message, "_blank");
+});
+</script>
+
+</body>
+</html>
